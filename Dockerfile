@@ -14,6 +14,8 @@ ENV PATH /root/anaconda3/bin:$PATH
 RUN conda update conda
 RUN conda update anaconda
 RUN conda update --all
+RUN conda install graphviz
+RUN conda install -c conda-forge python-graphviz
 # Configuring access to Jupyter
 RUN mkdir /opt/notebooks
 RUN jupyter notebook --generate-config --allow-root
